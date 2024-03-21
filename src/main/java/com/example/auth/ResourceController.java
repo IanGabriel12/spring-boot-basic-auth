@@ -13,4 +13,15 @@ public class ResourceController {
     public ResponseEntity<String> unsecureEndpoint() {
         return ResponseEntity.ok().body("Unsecure hello world");
     }
+
+    @GetMapping("/user/hello")
+    public ResponseEntity<String> securedEndpoint() {
+        return ResponseEntity.ok().body("Secure hello world");
+    }
+
+    @GetMapping("/admin/hello")
+    public ResponseEntity<String> adminEndpoint() {
+        return ResponseEntity.ok().body("Admin hello world");
+    }
+
 }
